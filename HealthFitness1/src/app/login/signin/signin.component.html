@@ -1,0 +1,40 @@
+<div id="home" style="background-image: url(/assets/img/images.png);background-size: cover;" class="container-fluid pt-5" >
+    <div class="row mx-auto">
+        <div class="col-md-5 text-center mx-auto">
+            <h1 style="color:white;" class="display-4"><br><br><br>Start your <span
+              class="txt-rotate"
+              data-period="2000"
+              data-rotate='[  "fitness", "healthy"  ]'></span><br> journey today!<br></h1>
+            <h3 style="color: white;">Achieve your fitness resolutions with World-class<br> Personal Coaching!</h3>
+        </div> 
+          
+        <div class="col-md-4 mx-auto   ">
+            <div class="card card-signin my-5 w-75 mx-auto" style="border-radius: 5%" >
+            <div class="card-body">
+                <h4 class="card-title text-center" >Sign In</h4>
+                <form class="form-signin" [formGroup]="sighinForm" (ngSubmit)="onSubmit()">
+                  <div>
+                    <label for="inputUser">User Name</label> 
+                    <input formControlName="userName" type="text" id="inputUser" class="form-control"  required autofocus>
+                  </div>
+                  <div>
+                    <label for="inputPassword">Password</label>   
+                    <input formControlName="pass" type="password" id="inputPassword" class="form-control"  required>
+                  </div>
+                
+                <!-- <div class="custom-control custom-checkbox mb-3"> -->
+                  <a >Forgot Password?</a>
+                      
+                                      
+                <!-- </div> -->
+                <a routerLink="/home"><button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button></a>
+                <hr class="my-4">
+                <a id="i" href="" class="btn btn-block btn-outline-danger" ><i class="fab fa-google"></i> Sign in with Google</a>
+                <a id="i" href="" class="btn btn-block btn-outline-primary"><i class="fab fa-facebook-f"></i> Sign in with facebook</a>
+
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div> 

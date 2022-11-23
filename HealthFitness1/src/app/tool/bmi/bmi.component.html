@@ -1,0 +1,57 @@
+
+<script>
+    function changeTab(s1,s2)
+    {
+        document.getElementById(q).innerHTML=s1;
+        s1='#'+s1;
+        s2='#'+s2;
+        document.getElementById(q).innerHTML=s1;
+        document.getElementById(s1).style.display='block';
+        document.getElementById(s2).style.display='none';
+    }
+</script>
+<div class="container"  ng-app="tabPanel">
+    <div class="jumbotron" id="s" ng-controller="headerCtrl">
+      <h1 style="color: white;">BMI Calculator</h1>
+      <br>
+      <div class="tab-controller-wrap"  >
+        <button class="tab-control mx-1" style="border: none;" onclick="changeTab('calc','info')" >Calculation</button>
+        <button class="tab-control mx-1" style="border: none;" onclick="changeTab('info','calc')" >BMI Classification</button>
+        <hr>
+        <div class="content-wrapper">
+  
+    <!-- Metric Calculator -->
+          <div id="calc" style="display: block;"  >
+             <form ng-controller="metricCtrl">
+              <div>
+                <label for="weight" class="mx-2 my-3">Weight : </label> 
+                <input  type="text" id="weight" required autofocus><b id="q" class="mx-2">kg</b>
+              </div>
+              <div>
+                <label for="height" class="mx-2 my-3">Height : </label> 
+                <input  type="text" id="height"   required autofocus><b class="mx-2">cm</b>
+              </div>
+              
+                <h3 class="my-5"><b >Your BMI is:</b></h3>
+              <h2 class="result">{{statsM.bmiM | number: 0}}</h2>
+            </form>
+          </div>
+          <div id="info" style="display: none;">
+            <div class="row">
+              <div class="col-md-12 col-md-6">
+                <h2>BMI Classification (Check out the category in which you fall)</h2>
+                <hr>
+                  <p><b>18.5&emsp;&emsp;&emsp;&emsp;Underweight - Try gaining some weight buddy!</b></p>
+                  <p ><b>18.5–24.9&emsp;&emsp;Normal Weight - You're good to go!</b></p>
+                  <p ><b>25.0–29.9&emsp;&emsp;Overweight - A bit of control and you'll be fit!</b></p>
+                  <p ><b>30.0–34.9&emsp;&emsp;Class I Obesity - Some exercise and diet required!</b></p>
+                  <p ><b>35.0–39.9&emsp;&emsp;Class II Obesity - Control your food habits and go for a walk daily!</b></p>
+                  <p ><b>≥ 40.0&emsp;&emsp;&emsp;&nbsp;&nbsp;Class III Obesity - Don't Eat Less! EAT HEALTHY!</b></p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,63 @@
+<div class="container" ng-app="tabPanel">
+        <div class="jumbotron" id="s" ng-controller="headerCtrl">
+          <h1 style="color: white">Ideal Weight Calculator</h1>
+          <br>
+          <div class="tab-controller-wrap" ng-controller="tabCtrl" ng-click="tabChange($event)">
+                <button class="tab-control mx-1" style="border: none;" onclick="changeTab('calc','info')" >Ideal Weight Calculation</button>
+            <button class="tab-control mx-1" style="border: none;" onclick="changeTab('calc','info')" >Related Information</button>
+            <hr>
+            <div class="content-wrapper">
+      
+        <!-- Metric Calculator -->
+              <div id="awesome2" class="ng-hide" ng-show="tabSelected=='#awesome2'">
+                 <form ng-controller="metricCtrl">
+                  
+      
+                  <h3>Please choose your gender:</h3>
+                  <label class="container1">Male
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container1">Female
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+      
+                  <div>
+                        <label for="height" class="mx-2 my-3">Height : </label> 
+                        <input  type="text" id="height"   required autofocus><b class="mx-2">cm</b>
+                      </div>
+                  <h3 class="my-s"><b>The ideal weight you should be having is: </b></h3>
+                  <h2 class="result">{{statsM.bmiM | number: 0}}</h2>
+                </form>
+              </div>
+              <div id="awesome3" class="ng-hide" ng-show="tabSelected=='#awesome3'">
+                <div class="row">
+                  <div class="col-md-12 col-md-6">
+                    <h3>Some information regarding the ideal weight calculated by our application: </h3>
+                    <hr>
+                      
+                          <h3>How the weight is calculated?</h3>
+                          <p>Male: Ideal Body Weight (in kilograms) = 50 + 2.3 kg per inch over 5 feet.</p>
+                          <p>Female: Ideal Body Weight (in kilograms) = 45.5 + 2.3 kg per inch over 5 feet.</p>
+                          <p>
+                              It is important to remember that there is a link between being overweight and a higher risk of many chronic diseases, including diabetes, hypertension, and metabolic syndrome. 
+                          </p>
+                          <p>
+                              Additionally, carrying extra weight can be tough on the skeletal system and joints, and it can result in changes in motor function and postural control.
+                          </p>
+                          <p>
+                              This may be because having extra body weight can reduce muscular strength and endurance, distort a person’s posture, and cause discomfort with normal body movements.
+                          </p>
+                          <p>
+                              For young people excess weight during the growth development stages can contribute to unusual motor patterning. This can remain into adulthood.
+                          </p>
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      

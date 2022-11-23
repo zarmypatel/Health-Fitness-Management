@@ -1,0 +1,14 @@
+{
+  "name": "health",
+  "version": "1.0.0",
+  "description": "HealthFitness Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HealthFitness"
+  ],
+  "author": "Sani Ranpariya and Yug Rajani",
+  "license": "ISC"
+}

@@ -1,0 +1,141 @@
+.jumbotron {
+    margin-top: 5%;
+}
+.tab-controller-wrap {
+    margin-top: 30px;
+}
+.tab-control, .tab-control:hover, .tab-control.active {
+    color: #fff;
+    text-decoration: none;
+}
+.tab-control {
+    padding: 10px 20px;
+    background-color: #12a5f4;
+}
+.tab-control:hover {
+    background-color: #70c9f8;
+}
+.tab-control.active {
+    background-color: #0a6392;
+}
+hr {
+    border: 1px solid #12a5f4;
+}
+.tab-wrapper {
+    margin-top: 20px;
+}
+.content-wrapper > div {
+    background-color: #fff;
+    padding: 20px;
+    line-height: 200%;
+}
+h5 {
+    display: inline;
+    margin-right: 20px;
+}
+.input-small {
+   width: 7%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+}
+
+p {
+  padding: 10px;
+}
+p:nth-child(3) {
+  background-color: #ffff84;
+}
+p:nth-child(4) {
+  background-color: #7fff7f;
+}
+p:nth-child(5) {
+  background-color: #ffa366;
+}
+p:nth-child(6) {
+  background-color: #ff7f7f;
+}
+p:nth-child(7) {
+  background-color: #f66;
+}
+p:nth-child(8) {
+  background-color: #ff4c4c;
+}
+
+
+
+/*For Radio Buttons*/
+.container1 {
+ display: block;
+ position: relative;
+ padding-left: 35px;
+ margin-bottom: 12px;
+ cursor: pointer;
+ font-size: 22px;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container1 input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 25px;
+ width: 25px;
+ background-color: #eee;
+ border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark {
+ background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container1 input:checked ~ .checkmark {
+ background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container1 input:checked ~ .checkmark:after {
+ display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container1 .checkmark:after {
+    top: 9px;
+   left: 9px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: white;
+}
+
+p {
+    font-size: 20px;
+    background-color: #ffff84;
+}
+
+#s{
+    background-image: url("/assets/img/black-background.jpg");
+}

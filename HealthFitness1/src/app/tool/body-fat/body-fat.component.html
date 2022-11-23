@@ -1,0 +1,71 @@
+<div class="container" ng-app="tabPanel">
+        <div class="jumbotron" id="s" ng-controller="headerCtrl">
+          <h1 style="color: white;">Ideal Weight Calculator</h1>
+          <br>
+          <div class="tab-controller-wrap" ng-controller="tabCtrl" ng-click="tabChange($event)">
+                <button class="tab-control mx-1" style="border: none;" onclick="changeTab('calc','info')" >Body Fat Calculaator</button>
+                <button class="tab-control mx-1" style="border: none;" onclick="changeTab('info','calc')" >Body Fat Classification</button>
+               <hr>
+            <div class="content-wrapper">
+      
+        <!-- Metric Calculator -->
+              <div id="awesome2" class="ng-hide" ng-show="tabSelected=='#awesome2'">
+                 <form ng-controller="metricCtrl">
+                  
+      
+                  <h4>Please choose your gender:</h4>
+                  <label class="container1">Male
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container1">Female
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+      
+                     <table>
+                         <tr>
+                        <td><label for="weight" class="mx-2 my-3">Weight : </label> </td>
+                        <td><input  type="text" id="weight" required autofocus><b class="mx-2">kg</b></td>
+                        </tr>
+                        <tr>
+                        <td><label for="height" class="mx-2 my-3">Height : </label> </td>
+                        <td><input  type="text" id="height"   required autofocus><b class="mx-2">cm</b></td>
+                        </tr>
+                      <tr>
+                        <td><label for="neck" class="mx-2 my-3">Neck : </label> </td>
+                        <td><input  type="text" id="neck" required autofocus><b class="mx-2">cm</b></td>
+                    </tr>
+                      <tr>
+                        <td><label for="waist" class="mx-2 my-3">Waist : </label> </td>
+                        <td><input  type="text" id="waist" required autofocus><b class="mx-2">cm</b></td>
+                    </tr>
+                      <tr>
+                        <td><label for="hip" class="mx-2 my-3">Hip : </label> </td>
+                        <td><input  type="text" id="Hip" required autofocus><b class="mx-2">cm</b></td>
+                    </tr>
+                      
+                    </table>
+                  
+                  <h3 class="my-5"><b>The ideal weight you should be having is: </b></h3>
+                  <h2 class="result">{{statsM.bmiM | number: 0}}</h2>
+                </form>
+              </div>
+              <div id="awesome3" class="ng-hide" ng-show="tabSelected=='#awesome3'">
+                <div class="row">
+                  <div class="col-md-12 col-md-6">
+                    <h2>Body Fat Classification: </h2>
+                    <hr>
+                     <p><b>Essential fat:&emsp; 10 - 13% for females and 2 - 5% for males</b></p>
+                    <p><b>Athletes:&emsp;&emsp;&nbsp;&nbsp; 14 - 20% for females and 6 - 13% for males</b></p>
+                    <p><b>Fitness:&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp; 21 - 24% for females and 14 - 17% for males</b></p>
+                    <p><b>Average:&emsp;&emsp;&nbsp;&nbsp; 25 - 31% for females and 18 - 25% for males</b></p>
+                    <p><b>Obese:&emsp;&emsp;&emsp;&nbsp;&nbsp; 32+% for females and 25+% for males</b></p>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    

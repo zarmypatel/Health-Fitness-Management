@@ -1,0 +1,56 @@
+
+<div id="dashboard" class="container py-5" style="box-sizing: border-box;">
+    <div class="p-2" >      
+        <h1 id="p" class="text-center">To Do List </h1>
+    </div>
+    <div>  
+        <div id="week" class="m-0 w-100 px-1 py-1" style="background-color: #ddd;">
+            <button class="btn active " onclick="displayList('mo')" style="width: 14.28%; color: white; background-color: #404040;;" id="mo" >Mo</button>
+            <button class="btn active" onclick="displayList('tu')" style="width: 14.28%;" id="tu" >Tu</button>
+            <button class="btn active" onclick="displayList('we')" style="width: 14.28%;" id="we" >We</button>
+            <button class="btn active" onclick="displayList('th')" style="width: 14.28%;" id="th" >Th</button>
+            <button class="btn active" onclick="displayList('fr')" style="width: 14.28%;" id="fr" >Fr</button>
+            <button class="btn active" onclick="displayList('sa')" style="width: 14.28%;" id="sa" >Sa</button>
+            <button class="btn active" onclick="displayList('su')" style="width: 14.28%;" id="su" >Su</button>
+        </div>
+    </div>
+    <div id="list" class="my-2" >
+        <div id="1" style="display: block;" >
+            <ul id="11">
+            </ul>
+        </div>
+        <div id="2" style="display: none">
+            <ul id="22">
+            </ul>    
+        </div>
+        <div id="3"style="display: none">
+            <ul id="33">
+            </ul>
+        </div>
+        <div id="4" style="display: none">
+            <ul id="44">
+            </ul>
+        </div>
+        <div id="5" style="display: none">
+                <ul id="55">
+                </ul>
+        </div>
+        <div id="6" style="display: none">
+            <ul id="66">
+            </ul>
+        </div>
+        <div id="7" style="display: none">
+            <ul id="77">
+            </ul>
+        </div>
+    </div>
+        
+    <div id="input" class="inPUT">
+        <span id="myInput">
+            <input type="text" id="item" class="col-md-10 px-auto" placeholder="Title...">
+            <input type="button" value="Add" onclick="newElement()" style="background-color: #1a75ff;" class=" col-md-2 px-auto" >    
+        </span>
+        
+    </div>
+    <!-- <p id="p"></p> -->  
+</div>
